@@ -89,4 +89,6 @@ node default {
     target => $boxen::config::repodir
   }
 
+  include apotact::environment
+
 }

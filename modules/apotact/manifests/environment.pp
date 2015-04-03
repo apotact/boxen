@@ -48,3 +48,4 @@
   package { 'gradle':
     ensure => present,
  }
+}
