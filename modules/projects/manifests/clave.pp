@@ -2,12 +2,19 @@ class projects::clave {
   include nodejs
   include arduino
 
-  $home = '/Users/${::boxen_user}/'
-  $srcdir = '${home}/src'
-  $clave = '${srcdir}/clave'
+  $home = "/Users/${::boxen_user}"
+  $srcdir = "${home}/src"
+  $clavedir = "${srcdir}/clave"
 
-  repository { '${clave}':
-      source => 'git@github.com:apotact/clave',
-      path => '/Users/${::boxen_user}/src/clave',
+  file { "$clavedir":
+    path => "$clavedir",
+    ensure => directory,
+  }
+
+  repository { "$clavedir":
+      source => 'apotact/clave',
+      path => "$clavedir",
+      require => File["$clavedir"],
+
     }
 }
