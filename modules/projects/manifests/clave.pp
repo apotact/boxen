@@ -8,6 +8,6 @@ class projects::clave {
 
   repository { '${clave}':
       source => 'git@github.com:apotact/clave',
-      path => $clave,
+      path => '/Users/${::boxen_user}/src/clave',
     }
 }
