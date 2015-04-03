@@ -1,7 +1,7 @@
 class people::sid::dotfiles {
 
   $home  = "/Users/${::boxen_user}"
-  $vim   = '${home}/.vim'
+  $vim   = "${home}/.vim"
 
   file { "${home}/.vimrc":
       ensure  => link,

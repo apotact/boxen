@@ -15,6 +15,5 @@ class projects::clave {
       source => 'apotact/clave',
       path => "$clavedir",
       require => File["$clavedir"],
-
     }
 }
