@@ -1,20 +1,6 @@
 class people::pfista::applications {
 
-  $home     = "/Users/${::boxen_user}"
-  $dotfiles = "${home}/.dotfiles"
-  
-  file { $dotfiles:
-    ensure  => directory
-  }
-
-  repository { $dotfiles:
-    source  => 'pfista/.dotfiles',
-    require => File[$dotfiles]
-  }
-
   include projects::all
-
-  ################# 
 
   # Personal osx settings
   osx::recovery_message { 'If this Mac is found, please call 281-703-5539': }

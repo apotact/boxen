@@ -89,9 +89,4 @@ node default {
     target => $boxen::config::repodir
   }
 
-  # Added includes
-  include apotact::environment
-
-  include people::pfista
-
 }
