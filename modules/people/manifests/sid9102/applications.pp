@@ -1,4 +1,4 @@
-class people::sid::applications {
+class people::sid9102::applications {
 
   include projects::all
 
