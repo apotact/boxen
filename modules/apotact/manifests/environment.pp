@@ -28,6 +28,7 @@
 
   class { 'intellij':
     edition => 'community',
+    version => '14.1.1',
   }
 
   include brewcask
