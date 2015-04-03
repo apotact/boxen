@@ -11,12 +11,12 @@ class people::pfista::applications {
   include osx::finder::no_file_extension_warnings
   include osx::safari::enable_developer_mode
   class { 'osx::dock::position':
-    position => 'right'
+    position => 'right',
   }
   # Make the top right corner start the screen saver and the bottom left corner
   # launch Mission Control
   class { 'osx::dock::hot_corners':
-    top_left=> "Start Screen Saver",
+    top_left => "Start Screen Saver",
   }
   class { 'osx::dock::magnification':
     magnification => false
