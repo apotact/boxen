@@ -88,4 +88,10 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+  # Added includes
+  include apotact::environment
+
+  include people::pfista
+
 }
