@@ -18,7 +18,7 @@ class people::sid9102::dotfiles {
 
   file { "${vim}/backup":
     ensure  => directory,
-    require => File["${vim}/backup"],
+    require => File["${vim}"],
   }
 
   file { $vim:
