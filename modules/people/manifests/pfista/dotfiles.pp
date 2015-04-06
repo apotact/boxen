@@ -13,11 +13,16 @@ class people::pfista::dotfiles {
 
   repository { $vim:
     source  => 'pfista/.vim',
-    require => File[$vim]
+    require => File[$vim],
+  }
+
+  file { "${vim}/backup":
+    ensure  => directory,
+    require => File["${vim}/backup"],
   }
 
   file { $vim:
-    ensure  => directory
+    ensure  => directory,
   }
 
   file { "${home}/.gitconfig":

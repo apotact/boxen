@@ -32,6 +32,7 @@
   }
 
   include brewcask
+
   package { 'slack': 
     provider => 'brewcask'
   }

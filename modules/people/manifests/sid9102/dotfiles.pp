@@ -16,8 +16,13 @@ class people::sid9102::dotfiles {
     require => File[$vim]
   }
 
+  file { "${vim}/backup":
+    ensure  => directory,
+    require => File["${vim}/backup"],
+  }
+
   file { $vim:
-    ensure  => directory
+    ensure  => directory,
   }
 
   file { "${home}/.gitconfig":
