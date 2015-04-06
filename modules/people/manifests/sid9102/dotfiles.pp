@@ -25,20 +25,4 @@ class people::sid9102::dotfiles {
     ensure  => directory,
   }
 
-  file { "${home}/.gitconfig":
-    ensure => link,
-    mode => '0644',
-    target => "${dotfiles}/.gitconfig",
-    require => Repository["${dotfiles}"],
-  }
-
-  repository { $dotfiles: 
-    source => 'pfista/.dotfiles',
-    require => File[$dotfiles],
-  }
-
-  file { $dotfiles:
-    ensure => directory,
-  }
-
 }
