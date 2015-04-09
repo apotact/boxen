@@ -1,0 +1,7 @@
+---
+
+# See https://github.com/boxen/puppet-ruby for docs
+ruby::global::version: "2.1.0"
+
+# See https://github.com/boxen/puppet-java for docs
+java::update_version: 75
