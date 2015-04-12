@@ -22,9 +22,6 @@ class people::pfista::applications {
     magnification => false
   }
 
-  include onepassword
-  include onepassword::chrome
-
   class { 'prezto': 
     repo => 'pfista/prezto'
   }
