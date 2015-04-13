@@ -41,7 +41,7 @@ class people::pfista::dotfiles {
     ensure => directory,
   }
 
-  repository { 'chriskempson/base16-iterm2':
+  repository { "${home}/src/base16-iterm2":
     source  => 'chriskempson/base16-iterm2',
   }
 
