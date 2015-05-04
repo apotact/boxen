@@ -2,7 +2,7 @@
 
  class apotact::environment {
 
-  include java # Install the default version of both the JDK and JRE
+  include java
   include chrome
    
   include iterm2::dev
@@ -34,8 +34,10 @@
   include brewcask
 
   package { 'slack': 
-    provider => 'brewcask'
+    provider => 'brewcask',
+    ensure => present,
   }
+
 
   package { 'ssh-copy-id':
     ensure => present,
