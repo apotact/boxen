@@ -7,3 +7,15 @@
 # that you can affect 'out of the box', and then customise to your
 # heart's content.
 
+# See https://github.com/boxen/puppet-ruby for docs
+ruby::global::version: "2.2.3"
+ruby::build::ensure: "v20151024"
+ruby::rbenv_plugins:
+  rbenv-vars:
+    ensure: v1.0.0
+    source: sstephenson/rbenv-vars
+ruby::version::alias:
+  2.0.0: 2.0.0-p647
+
+# See https://github.com/boxen/puppet-java for docs
+java::update_version: 51
