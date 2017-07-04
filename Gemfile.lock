@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    CFPropertyList (2.3.5)
     addressable (2.3.8)
     ansi (1.5.0)
     aws-sdk-core (2.0.48)
@@ -94,6 +95,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  CFPropertyList (>= 2.2.6)
   aws-sdk-core (~> 2.0.11)
   boxen (~> 2.9.0)
   deep_merge (~> 1.0)
