@@ -10,6 +10,7 @@ gem "open4",                  "~> 1.3.4"
 gem "rake",                   "10.3.2"
 gem "rspec-puppet",           "1.0.1"
 gem "deep_merge",             "~> 1.0"
+gem 'CFPropertyList',         '>= 2.2.6'
 
 group :test do
   gem "serverspec"
